@@ -1,0 +1,2 @@
+const permutations = string =>
+  string.length < 2 ? [string] : [...string].reduce((pre, val, idx) => string.indexOf(val) === idx ? [...pre, ...permutations(string.slice(0, idx) + string.slice(idx + 1)).map(v => val + v)] : pre, []);
