@@ -1,0 +1,1 @@
+const domainName = url => /(\/)?(www\.)?([\w\-]+)\./.exec(url)[3]

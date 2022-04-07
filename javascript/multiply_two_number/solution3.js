@@ -1,0 +1,1 @@
+const multiply = (...numbers) => numbers.reduce((acc, curr) => acc * curr);
