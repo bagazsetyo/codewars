@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="editor">
+    </div>
+
+    <!-- cdn jqery 3 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        // convert int to string
+        function convertIntToString(num = 0) {
+            var str = num.toString().split();
+            console.log(str);
+            //
+            if (num == 0) {
+                return 'nol';
+            } else if (num == 1) {
+                return 'satu';
+            } else if (num == 2) {
+                return 'dua';
+            } else if (num == 3) {
+                return 'tiga';
+            } else if (num == 4) {
+                return 'empat';
+            } else if (num == 5) {
+                return 'lima';
+            } else if (num == 6) {
+                return 'enam';
+            } else if (num == 7) {
+                return 'tujuh';
+            } else if (num == 8) {
+                return 'delapan';
+            } else if (num == 9) {
+                return 'sembilan';
+            }
+
+        }
+
+        console.log(convertIntToString());
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 4 cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="file" name="file_1" id="file_1">
+        <input type="file" name="file_2" id="file_2">
+        <input type="file" name="file_3" id="file_3">
+        <input type="file" name="file_4" id="file_4">
+        <div id="field2_area">
+
+        </div>
+        <input type="submit" name="submit" value="Submit">
+
+    </form>
+    <!-- jquery 3 cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        // clone input file with id file_1 to all
+        $('#file_1').on('change', function (e) {
+            // var clone = $(this).clone();
+            // // get all input tipe file without id file_1
+            // var files = $('input[type="file"]').not('#file_1');
+            // loop files
+            files.each(function (index, file) {
+                // set this value to value id file_1
+                $(file).val($('#file_1').val());
+            });
+        })
+    </script>
+</body>
+
+</html>

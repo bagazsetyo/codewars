@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard." />
+    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard" />
+    <meta name="author" content="PIXINVENT" />
+    <meta name="csrf-token" content="gBknK9PL03SArpgigDM6CKp6ve9CdUNxl7vfWia3" />
+    <title>Sistem Registrasi Museum</title>
+    <link rel="apple-touch-icon" href="http://localhost:8000/backend/app-assets/images/logo/logo100x100.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:8000/backend/app-assets/images/logo/logo100x100.png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet" />
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/vendors.css" />
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/vendors/css/extensions/sweetalert.css" />
+    <script src="http://localhost:8000/backend/app-assets/vendors/js/extensions/sweetalert.min.js"></script>
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/core/menu/menu-types/vertical-menu.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/core/colors/palette-gradient.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/pages/hospital.css" />
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/assets/css/style.css" />
+    <!-- END Custom CSS-->
+    <style>
+      .table > tbody > tr > td {
+        vertical-align: middle;
+      }
+    </style>
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/core/menu/menu-types/vertical-menu.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/core/colors/palette-gradient.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/css/plugins/forms/wizard.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+    <!-- END Page Level CSS-->
+  </head>
+
+  <body class="vertical-layout vertical-menu 2-columns menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+    <table width="100%" class="table table-striped table-bordered dataTable no-footer" id="dt-skema" role="grid" aria-describedby="dt-skema_info" style="width: 100%">
+      <thead>
+        <tr role="row">
+          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 148px">Hari</th>
+          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 163px">Jam Buka</th>
+          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 163px">Jam Tutup</th>
+          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 68px">Status</th>
+          <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 163px">Harga Tiket</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Senin" name="hari1" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka1" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka1" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup1" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup1" />
+          </td>
+          <td>
+            <select id="status" name="status1" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga1" aria-invalid="false" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga1" />
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Selasa" name="hari2" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka2" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka2" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup2" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup2" />
+          </td>
+          <td>
+            <select id="status" name="status2" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga2" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga2" />
+          </td>
+        </tr>
+        <tr role="row" class="odd">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Rabu" name="hari3" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka3" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka3" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup3" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup3" />
+          </td>
+          <td>
+            <select id="status" name="status3" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga3" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga3" />
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Kamis" name="hari4" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka4" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka4" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup4" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup4" />
+          </td>
+          <td>
+            <select id="status" name="status4" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga4" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga4" />
+          </td>
+        </tr>
+        <tr role="row" class="odd">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Jumat" name="hari5" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka5" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka5" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup5" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup5" />
+          </td>
+          <td>
+            <select id="status" name="status5" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga5" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga5" />
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Sabtu" name="hari6" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka6" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka6" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup6" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup6" />
+          </td>
+          <td>
+            <select id="status" name="status6" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga6" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga6" />
+          </td>
+        </tr>
+        <tr role="row" class="odd">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Minggu" name="hari7" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka7" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka7" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup7" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup7" />
+          </td>
+          <td>
+            <select id="status" name="status7" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga7" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga7" />
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td><input type="text" readonly="" id="hari" class="form-control" value="Tanggal Merah" name="hari8" /></td>
+          <td>
+            <select id="waktu_buka" name="waktu_buka8" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_buka" class="form-control" value="" name="ket_waktu_buka8" />
+          </td>
+          <td>
+            <select id="waktu_tutup" name="waktu_tutup8" class="custom-select form-control required">
+              <option value="07:00">07:00</option>
+              <option value="07:30">07:30</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_waktu_tutup" class="form-control" value="" name="ket_waktu_tutup8" />
+          </td>
+          <td>
+            <select id="status" name="status8" class="custom-select form-control">
+              <option value="Buka">Buka</option>
+              <option value="Tutup">Tutup</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="harga" class="form-control" value="0" placeholder="10000 atau 20000" name="harga8" />
+            <br />
+            <span>*Keterangan: </span>
+            <br />
+            <input type="text" id="ket_harga" class="form-control" value="" name="ket_harga8" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- BEGIN VENDOR JS-->
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="http://localhost:8000/assets/js/jquery.min.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/vendors/js/vendors.min.js"></script>
+    <script rel="stylesheet" type="text/css" href="http://localhost:8000/backend/app-assets/js/pace.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+
+    <!-- BEGIN MODERN JS-->
+    <script src="http://localhost:8000/backend/app-assets/js/core/app-menu.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/js/core/app.js"></script>
+    <!-- END MODERN JS-->
+
+    <script>
+      function confirm(title, message, action) {
+        swal({
+          title: title,
+          text: message,
+          icon: "warning",
+          buttons: ["Tidak", "Iya"],
+          dangerMode: true,
+        }).then((save) => {
+          if (save) {
+            action();
+          }
+        });
+      }
+
+      function success(message) {
+        swal({
+          title: "Sukses",
+          text: message,
+          icon: "success",
+        });
+      }
+
+      function failed(message) {
+        swal({
+          title: "Gagal",
+          text: message,
+          icon: "error",
+        });
+      }
+
+      // $(function(){
+      //     var interval = 3000;
+      //     setInterval(() => {
+      //         getNotification();
+      //     }, interval);
+      // });
+      getNotification();
+      function getNotification() {
+        $.get("http://localhost:8000/notification/", function (response, status) {
+          var data = response.data;
+          var total = response.total;
+          var html = "";
+          data.forEach((element) => {
+            const isNotification = element.type == 1 ? "?notification=1" : "";
+            html += '<a href="' + "http://localhost:8000/admin/activity/log/" + element.log_id + isNotification + '">';
+            html += '<div class="media">';
+            if (element.methodType == "GET") {
+              html += '<div class="media-left align-self-center"><i class="ft-eye icon-bg-circle bg-cyan"></i></div>';
+            } else if (element.methodType == "POST") {
+              html += '<div class="media-left align-self-center"><i class="ft-eye icon-bg-circle bg-warning"></i></div>';
+            } else if (element.methodType == "PUT") {
+              html += '<div class="media-left align-self-center"><i class="ft-eye icon-bg-circle bg-warning"></i></div>';
+            } else if (element.methodType == "DELETE") {
+              html += '<div class="media-left align-self-center"><i class="ft-eye icon-bg-circle bg-red"></i></div>';
+            } else {
+              html += '<div class="media-left align-self-center"><i class="ft-eye icon-bg-circle bg-cyan"></i></div>';
+            }
+            html += '<div class="media-body">';
+            html += '<h6 class="media-heading">' + element.nama + "</h6>";
+            const encodedDesc = encodeURIComponent(element.description);
+            html += '<p class="notification-text font-small-3 text-muted">' + encodedDesc + "</p><small>";
+            //html += '<time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time></small>';
+            html += "</div>";
+            html += "</div>";
+            html += "</a>";
+          });
+          $(".list-notification").html(html);
+          $(".total-notification").html(total);
+        });
+      }
+
+      $(() => {
+        $("#logout").click(() => {
+          $.get(`http://sso.dapobud.kemdikbud.go.id/site/logout`, (response, status) => {
+            console.log(response);
+            console.log(status);
+          });
+        });
+      });
+
+      function renderHtml(data, type, row, meta) {
+        if (type === "display") {
+          return $("<div/>").text(data).html();
+        } else {
+          return data;
+        }
+      }
+    </script>
+    <!-- BEGIN PAGE VENDOR JS-->
+    <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/js/scripts/formater/jquery.masknumber.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/vendors/js/extensions/jquery.steps.min.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <script src="http://localhost:8000/backend/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="http://localhost:8000/backend/app-assets/js/scripts/pages/hospital-add-doctors.js"></script>
+    <!-- END PAGE LEVEL JS-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDanTX_5p--4MrY-tNuMHOiLHHRkabYSbo&libraries=places&callback=initAutocomplete" async defer></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-99YM15D86P"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('input[type="number"]').on("wheel", function (e) {
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

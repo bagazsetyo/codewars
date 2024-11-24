@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text" class="textme">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, distinctio facilis. Officiis esse perferendis repellat, debitis exercitationem iste. Quod id saepe incidunt recusandae earum dolores nemo reprehenderit distinctio corporis deleniti!</p>
+    <button id="button1">click me</button>
+    <script>
+        var ambil_button_me = document.getElementById("button1");
+        var is_show = false;
+        ambil_button_me.addEventListener("click", function(){
+            var ambil_text_me = document.getElementById("text");
+            var confirm_me = confirm("are you sure?");
+            if(confirm_me){
+                if(is_show){
+                    ambil_text_me.style.display = "none";
+                    is_show = false;
+                }else{
+                    ambil_text_me.style.display = "block";
+                    is_show = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

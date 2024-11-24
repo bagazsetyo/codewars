@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap 3 cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div id="tab-danom" class="tab-pane active">
+      <div id="form-danom" class="table-responsive">
+        <table class="table table-bordered table-striped" id="tbdanom">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>RENKAS</th>
+              <th>NAMA</th>
+              <th>JABATAN</th>
+              <th>KATEGORI</th>
+              <th>GOL</th>
+              <th>NOMOR NPWP</th>
+              <th>NOMINAL KOTOR</th>
+              <th>JUMLAH BULAN</th>
+              <th>JUMLAH KOTOR</th>
+              <th>NILAI PPH</th>
+              <th>JUMLAH BERSIH</th>
+              <th><button type="button" name="add" class="btn btn-info btn-sm addrow-danom noborder-radius">+</button></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="tr-danom">
+              <td class="numbering text-center">1</td>
+              <td>
+                <select class="form-control input-sm renkas_detail_id" name="Danom[renkas_detail_id][]" id="Danom_renkas_detail_id" style="width: 150px">
+                  <option value="130320" data-mak="1575.ABD.001.051.A.521211">Snack Rapat</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="Danom[nama][]" placeholder="nama" class="form-control input-sm nama-anggota-danom ui-autocomplete-input" autocomplete="off" />
+                <input type="" name="Danom[nip][]" class="nip form-control input-sm" value="197509111999031001" />
+                <input type="" name="Danom[blocked][]" class="blocked" value="" />
+                <input type="" name="Danom[counting][]" class="counting" value="" />
+              </td>
+              <td><input type="text" name="Danom[jabatan][]" placeholder="Jabatan" class="form-control input-sm triggerChanged jabatan" value="" /></td>
+              <td>
+                <select class="form-control input-sm triggerChanged kategori" style="width: 60px" name="Danom[kategori][]" id="Danom_kategori">
+                  <option value="1" selected="selected">PNS</option>
+                  <option value="2">OUTSOURCING</option>
+                  <option value="3">NON PNS</option>
+                </select>
+              </td>
+              <td>
+                <select class="form-control input-sm triggerChanged golongan" style="width: 60px" name="Danom[golongan][]" id="Danom_golongan">
+                  <option value="IV" selected="selected">IV</option>
+                  <option value="III">III</option>
+                  <option value="II">II</option>
+                  <option value="I">I</option>
+                </select>
+              </td>
+              <td><input type="text" name="Danom[npwp][]" placeholder="NPWP" class="form-control input-sm npwp triggerChanged" value="" /></td>
+              <td><input type="text" name="Danom[nominal_kotor][]" placeholder="Nominal Kotor" class="formatted form-control input-sm triggerChanged nominal_kotor" value="" /></td>
+              <td><input type="number" name="Danom[jumlah_bulan][]" placeholder="Jumlah Bulan" class="form-control input-sm triggerChanged jumlah_bulan" value="1" min="0" /></td>
+              <td><input type="text" name="Danom[jumlah_kotor][]" placeholder="Jumlah Kotor" class="formatted form-control input-sm jumlah_kotor" value="" readonly="readonly" /></td>
+              <td><input type="text" name="Danom[pph][]" placeholder="Nilai PPh" class="formatted form-control input-sm pph triggerChanged" value="" /></td>
+              <td><input type="text" name="Danom[jumlah_terima][]" placeholder="Jumlah Bersih" class="formatted form-control input-sm jumlah_terima" value="" readonly="readonly" /></td>
+              <td><button type="button" name="rmv" class="btn btn-danger btn-sm delrow-danom noborder-radius">x</button></td>
+            </tr>
+            <tr class="tr-danom">
+              <td class="numbering text-center">2</td>
+              <td>
+                <select class="form-control input-sm renkas_detail_id" name="Danom[renkas_detail_id][]" id="Danom_renkas_detail_id" style="width: 150px">
+                  <option value="130320" data-mak="1575.ABD.001.051.A.521211">Snack Rapat</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="Danom[nama][]" placeholder="nama" class="form-control input-sm nama-anggota-danom ui-autocomplete-input" autocomplete="off" />
+                <input type="" name="Danom[nip][]" class="nip form-control input-sm" value="197509111999031001" />
+                <input type="" name="Danom[blocked][]" class="blocked" value="1" />
+                <input type="" name="Danom[counting][]" class="counting" value="1" />
+              </td>
+              <td><input type="text" name="Danom[jabatan][]" placeholder="Jabatan" class="form-control input-sm triggerChanged jabatan" value="" /></td>
+              <td>
+                <select class="form-control input-sm triggerChanged kategori" style="width: 60px" name="Danom[kategori][]" id="Danom_kategori">
+                  <option value="1" selected="selected">PNS</option>
+                  <option value="2">OUTSOURCING</option>
+                  <option value="3">NON PNS</option>
+                </select>
+              </td>
+              <td>
+                <select class="form-control input-sm triggerChanged golongan" style="width: 60px" name="Danom[golongan][]" id="Danom_golongan">
+                  <option value="IV" selected="selected">IV</option>
+                  <option value="III">III</option>
+                  <option value="II">II</option>
+                  <option value="I">I</option>
+                </select>
+              </td>
+              <td><input type="text" name="Danom[npwp][]" placeholder="NPWP" class="form-control input-sm npwp triggerChanged" value="" /></td>
+              <td><input type="text" name="Danom[nominal_kotor][]" placeholder="Nominal Kotor" class="formatted form-control input-sm triggerChanged nominal_kotor" value="" readonly="readonly" /></td>
+              <td><input type="number" name="Danom[jumlah_bulan][]" placeholder="Jumlah Bulan" class="form-control input-sm triggerChanged jumlah_bulan" value="1" min="0" readonly="readonly" /></td>
+              <td><input type="text" name="Danom[jumlah_kotor][]" placeholder="Jumlah Kotor" class="formatted form-control input-sm jumlah_kotor" value="" readonly="readonly" /></td>
+              <td><input type="text" name="Danom[pph][]" placeholder="Nilai PPh" class="formatted form-control input-sm pph triggerChanged" value="" readonly="readonly" /></td>
+              <td><input type="text" name="Danom[jumlah_terima][]" placeholder="Jumlah Bersih" class="formatted form-control input-sm jumlah_terima" value="" readonly="readonly" /></td>
+              <td><button type="button" name="rmv" class="btn btn-danger btn-sm delrow-danom noborder-radius">x</button></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7"></td>
+              <td>
+                <input id="grand_total_kotor" class="form-control input-sm formatted required grand_total_kotor" placeholder="Total Kotor" readonly="readonly" name="UangMuka[uang_total_peserta]" type="text" />
+              </td>
+              <td><input type="text" name="grand_total_pajak" id="grand_total_pajak" placeholder="Total Pajak" class="formatted form-control input-sm" value="" readonly="readonly" /></td>
+              <td><input type="text" name="grand_total_terima" id="grand_total_terima" placeholder="Total Terima" class="formatted form-control input-sm" value="" readonly="readonly" /></td>
+              <td><button type="button" name="add" class="btn btn-info btn-sm addrow-danom noborder-radius">+</button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <select class="check">
+        <option value="one">one</option>
+        <option value="two">two</option>
+        </select>
+        
+    <!-- jquery 3 cdn  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        // triger select renkas_detail_id
+        // $(document).on('change', '.renkas_detail_id', function() {
+        //     // var renkas_detail_id = $(this).val();
+        //     // var tr = $(this).closest('tr');
+        //     // var mak = $(this).find(':selected').data('mak');
+        //     // tr.find('.mak').val(mak);
+        //     alert('test');
+        // });
+
+        // $('.renkas_detail_id').change(function(){
+        //     var data= $(this).val();
+        //     alert(data);            
+        // });
+
+        // addrow-danom clone to tbody 
+        $('.addrow-danom')
+
+        $('.renkas_detail_id').on('change', function(){
+            alert(this.value);
+        })
+        
+   
+        $('.renkas_detail_id').trigger('change');
+    </script>
+  </body>
+</html>

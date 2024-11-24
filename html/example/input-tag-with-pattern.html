@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+</head>
+<body>
+    <input type="text" id="hashtagInput">
+    <p id="validationMessage" style="color: red;"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputElement = document.getElementById("hashtagInput");
+            const validationMessage = document.getElementById("validationMessage");
+
+            inputElement.addEventListener("input", function() {
+                const inputValue = this.value;
+                const regex = /^#([A-Za-z0-9_-]+( #[A-Za-z0-9_-]+)*)$/;
+
+                if (regex.test(inputValue)) {
+                    validationMessage.textContent = ""; // Teks valid, hapus pesan kesalahan
+                } else {
+                    validationMessage.textContent = "Format harus sesuai: #kata atau #kata #kata";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 4 cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="col-12">
+                <input min="0" type="number" id="input_nilai" class="form-control">
+            </div>
+            <div class="col-12">
+                <button type="button" id="generate" class="btn btn-primary">Hasil</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div id="hasil">
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="check1">
+    <input type="checkbox" name="check2">
+    <input type="checkbox" name="check3">
+    <input type="checkbox" name="check4">
+
+    <script>
+        // click all input checkbox
+        $('input[type="checkbox"]').click(function() {
+            // get all checkbox
+            var checkboxes = $('input[type="checkbox"]');
+            // get all checked checkbox
+            var checked = checkboxes.filter(':checked');
+            // get all unchecked checkbox
+            var unchecked = checkboxes.filter(':not(:checked)');
+            // get all checked checkbox value
+            var checked_value = checked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all unchecked checkbox value
+            var unchecked_value = unchecked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all checked checkbox value
+            var checked_value = checked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all unchecked checkbox value
+            var unchecked_value = unchecked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all checked checkbox value
+            var checked_value = checked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all unchecked checkbox value
+            var unchecked_value = unchecked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all checked checkbox value
+            var checked_value = checked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all unchecked checkbox value
+            var unchecked_value = unchecked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all checked checkbox value
+            var checked_value = checked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all unchecked checkbox value
+            var unchecked_value = unchecked.map(function() {
+                return this.value;
+            }).get().join(',');
+            // get all checked checkbox value
+            var checked_
+
+        $('#generate').click(function () {
+            var input = $('#input_nilai').val();
+            var rumus = '';
+            var hasil = 1;
+
+            for (let index = input; index > 0; index--) {
+                rumus += ((index == input) ? index : ' * ' + index);
+                hasil *= index;
+            }
+            $('#hasil').html('<p> Hasil dari ' + input + ' faktorial adalah </p>' + '<p>' + rumus + ' = ' + hasil + '</p>');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body class="h-screen" x-data="data()">
+
+    <section id="loading">
+
+    </section>
+
+    <section id="portfolio" class="p-5 h-full">
+        <!-- with calc 1/5 -->
+        <div class="grid grid-cols-5 gap-4 group h-full relative overflow-hidden">
+            <div @mouseover="portfolioMenuGrid.status = true" @mouseout="portfolioMenuGrid.status = false" :class="portfolioMenuGrid.status ? portfolioMenuGrid.openStatusMenu : portfolioMenuGrid.closeStatusMenu" class="bg-red-200 transition ">
+                grid 1
+            </div>
+            <div :class="portfolioMenuGrid.status ? portfolioMenuGrid.openStatusDetail : portfolioMenuGrid.closeStatusDetail" class="transition duration-1000 delay-1000" x-transition>
+                grid 2
+            </div>
+        </div>
+    </section>
+
+    <!-- <script src="../../assets/js/jquery.min.js"></script> -->
+    <!-- <script src="../../assets/js/swiper-bundle.min.js"></script> -->
+    <!-- <script src="../../assets/js/alpine.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"></script>
+    <script>
+        function data() {
+            return {
+                open: false,
+                portfolioMenuGrid: {
+                    status: false,
+                    openStatusMenu: 'relative',
+                    closeStatusMenu: 'absolute h-full ',
+                    openStatusDetail: 'col-span-4 bg-red-200',
+                    closeStatusDetail: 'col-span-5 bg-red-400'
+                },
+            }
+        }
+    </script>
+</body>
+
+</html>

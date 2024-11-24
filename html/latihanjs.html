@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyektigasatu</title>
+</head>
+
+<body>
+    <table border="1" width="100%" style="background-color: #041C32;">
+        <tr>
+            <td colspan="2">
+                <img src="gambar/bintang.jpg" width=" 100%" height="200px">
+            </td>
+        </tr>
+        <tr>
+            <td width="20%" height="250px" style="background-color: #ecb365; color: azure;">
+                <ul style="list-style: none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="latihansatu.html">Latihan1</a></li>
+                    <li><a href="latihandua.html">Latihan2</a></li>
+                    <li><a href="latihantiga.html">Latihan3</a></li>
+                    <li><a href="latihancss.html">Latihan CSS</a></li>
+                    <li><a href="latihanjs.html">Latihan JS</a></li>
+                </ul>
+            </td>
+            <td width="80%" align="center" style="background-color: #064663;">
+                <p>
+                    <input type="button" value="Jangan Diklik" onclick="alert('kok tetap diklik sih!')">
+                </p>
+                <p>
+                    <input type="button" value="Merah" onmouseover="document.bgColor='red'"
+                        onmouseout="document.bgColor='white'" name="">
+                </p>
+                <p>
+                    <button id="button" onclick="document.getElementById('demo')">
+                        Klik untuk menampilkan.
+                    </button>
+                    <script>
+                        var ambil_button_me = document.getElementById("button");
+                        var date = Date();
+                        ambil_button_me.addEventListener("click", function () {
+                            var ambil_text_me = document.getElementById("demo");
+                            var value = ambil_text_me.innerHTML;
+                            console.log(value); // debug check isi value
+                            if (!value) { // jika data kosong 
+                                ambil_text_me.innerText = date; // isi text dengan date
+                            } else { // jika data tidak kosong
+                                var yakin = confirm("Kamu Yakin Hapus?"); // munculkan confirm
+                                if (yakin) { // jika yakin
+                                    ambil_text_me.innerHTML = ""; // kosongkan text
+                                }
+                            }
+                        });
+                    </script>
+                </p>
+                <p id="demo"></p>
+                <p>
+                    <button id="button1" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>
+                        Click Me!
+                    </button>
+                    <script>
+                        var ambil_button_me = document.getElementById("button1");
+                        var is_show = false;
+                        ambil_button_me.addEventListener("click", function () {
+                            var ambil_text_me = document.getElementById("demo");
+                            var yakin = confirm("Kamu Yakin?");
+                            if (yakin) {
+                                if (is_show) {
+                                    ambil_text_me.style.display = "block";
+                                    is_show = false;
+                                } else {
+                                    ambil_text_me.style.display = "none";
+                                    is_show = true;
+                                }
+                            }
+                        });
+                    </script>
+                </p>
+                <p>
+                    <button onclick="document.getElementById('myImage').src='gambar/pic_bulbon.gif'">
+                        Turn on the light
+                    </button>
+                    <img id="myImage" src="gambar/pic_bulboff.gif" style="width:100px">
+                    <button onclick="document.getElementById('myImage').src='gambar/pic_bulboff.gif'">
+                        Turn off the light
+                    </button>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: #ecb365;color:white;text-align:center;">
+                Create by Me
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

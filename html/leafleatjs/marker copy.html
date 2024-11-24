@@ -1,0 +1,60 @@
+<!-- Include Leaflet CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-3sl65HAys4gogXnktP4W4nNGQkZGgdtiJmDnSntNRmGdMljsl4am9Xg4Z4a0Zv1Qh/UwIsyJjjDy+PpCOAzbIg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-r8q3ZqL/gyw7VckxWJ1F7Eiup+ivFmC9MgWfE8zlbNSZ6LbTgTmT6rSL8QvHJbHJ9hqO7Xu8KjZFM7BpJLlfIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Include TurfJS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.1.1/turf.min.js" integrity="sha512-E4dj4g1ZSXfB85CjK7IhHXUpnSbGPPKjJN+D9GJ5N5a5eYejw69K+c1QFk/3JqP3o5pG0Dsslu9OJ5RMf0rd2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Create a map -->
+<div id="mapid" style="height: 400px;"></div>
+
+<!-- Define the custom marker icon -->
+<script>
+var customIcon = L.icon({
+    iconUrl: 'https://via.placeholder.com/30.png/0000FF/FFFFFF?text=Marker',
+    iconSize: [30, 30]
+});
+</script>
+
+<!-- Add the marker for Jawa Barat -->
+<script>
+// L.marker([-6.92043, 107.60495], {icon: customIcon}).addTo(map);
+</script>
+
+<!-- Add the marker for Jawa Timur -->
+<script>
+// L.marker([-7.25045, 112.76885], {icon: customIcon}).addTo(map);
+</script>
+
+<script>
+// Get the user location
+// var userLocation = L.latLng(-7.198426, 107.370221);
+
+// // Define a GeoJSON feature collection to hold the markers
+// var markers = L.featureGroup().addTo(map);
+
+// // Define a circle to show the user location and search radius
+// var searchRadius = L.circle(userLocation, {
+//     radius: 100000, // 100km in meters
+//     opacity: 0.5,
+//     fillOpacity: 0.1
+// }).addTo(map);
+
+// // Calculate the distance between user location and each marker location
+// var markerLocations = [
+//     [-6.92043, 107.60495],
+//     [-7.25045, 112.76885]
+// ];
+// markerLocations.forEach(function(markerLocation) {
+//     var markerLatLng = L.latLng(markerLocation);
+//     var distance = turf.distance(userLocation.toGeoJSON(), markerLatLng.toGeoJSON());
+//     console.log(distance);
+//     if (distance <= 100000) { // Check if the distance is less than or equal
+//         // Add the marker to the map
+//         L.marker(markerLatLng, {icon: customIcon}).addTo(markers);
+//     }
+// });
+
+// // Fit the map to the markers
+// map.fitBounds(markers.getBounds());
+</script>

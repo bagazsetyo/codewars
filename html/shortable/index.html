@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+  <style>
+    .ml-4{
+        margin-left: 40px;
+    }
+    .ml-8{
+        margin-left: 80px;
+    }
+    li.unsortable {
+        background: #999;
+        opacity:.5;
+    }
+  </style>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <!-- <li class="ui-state-default unsortable"><span class="ui-icon ui-icon-arrowthick-2-n-s "></span>Item 1</li> -->
+</ul>
+
+<style>
+    #groupsList { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #groupsList li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #groupsList li span { position: absolute; margin-left: -1.3em; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+
+    var list = [
+        {
+            "id" : 1,
+            "name" : "Item 1",
+            "status" : "active",
+            "is_parent" : true,
+            "referance" : "",
+            "level" : 1,
+        },
+        {
+            "id" : 2,
+            "name" : "Item 2",
+            "status" : "active",
+            "is_parent" : true,
+            "referance" : "",
+            "level" : 1,
+        },
+        {
+            "id" : 3,
+            "name" : "Item 3",
+            "status" : "active",
+            "is_parent" : false,
+            "referance" : 5,
+            "level" : 3,
+        },
+        {
+            "id" : 4,
+            "name" : "Item 4",
+            "status" : "active",
+            "is_parent" : true,
+            "referance" : "",
+            "level" : 1,
+        },
+        {
+            "id" : 5,
+            "name" : "Item 5",
+            "status" : "active",
+            "is_parent" : false,
+            "referance" : 4,
+            "level" : 2,
+        },
+        {
+            "id" : 6,
+            "name" : "Item 6",
+            "status" : "active",
+            "is_parent" : true,
+            "referance" : "",
+            "level" : 1,
+        },
+        {
+            "id" : 7,
+            "name" : "Item 7",
+            "status" : "active",
+            "is_parent" : false,
+            "referance" : 6,
+            "level" : 2,
+        }
+    ];
+
+    $( function() {
+      $( "#sortable" ).sortable({
+        items: "li:not(.unsortable)"
+      })
+        .on("sortstart", function( event, ui ) {
+            initialPos = ui.item.index() + 1; // when using a 1-based index    
+
+            let level = ui.item.attr("level");
+
+            // get all list 
+            let listItem = $(this).find("li");
+            listItem.each(function(index, value){
+                // get all level attribute 
+                let levelItem = $(value).attr("level");
+                if(levelItem != level){
+                    $(value).addClass("unsortable");
+                }
+            });
+
+            console.log("Item started at position", initialPos);
+        })  
+        .on("sortstop", function( event, ui ) {
+            let listItem = $(this).find("li");
+            listItem.each(function(index, value){
+                $(value).removeClass("unsortable");
+            });
+        })
+        .on("sortupdate", function( event, ui ) {
+            finalPos =  ui.item.index() + 1; // when using a 1-based index  	
+            console.log("moved from position", initialPos, "to", finalPos);
+        });
+    });
+    $(".sortable").disableSelection();
+
+    // loop list
+    for (var i = 0; i < list.length; i++) {
+        var item = list[i];
+        var li = document.createElement("li");
+        li.setAttribute("id", item.id);
+
+        // set attribut by key 
+        for (var key in item) {
+            li.setAttribute(key, item[key]);
+        }
+
+        if(item.level == 1){
+            li.setAttribute("class", "ui-state-default");
+        }else if (item.level == 2){
+            li.setAttribute("class", "ui-state-default ml-4");
+        }else if (item.level == 3){
+            li.setAttribute("class", "ui-state-default ml-8");
+        }
+        li.innerHTML = item.name;
+        if (item.level == 1) {
+            li.innerHTML += "<span class='ui-icon ui-icon-arrowthick-2-n-s'></span>";
+        }
+        document.getElementById("sortable").appendChild(li);
+    } 
+
+    </script>
+</body>
+</html>

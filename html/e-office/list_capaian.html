@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap 3 cdn  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <section id="content" class="">
+      <div class="webContent">
+        <div class="panel panel-primary">
+          <div class="panel">
+            <div class="panel-heading bg-info">
+              <span class="panel-icon"><i class="fa fa-calendar"></i></span><span class="panel-title fwbold">Daftar Konfirmasi Capaian Realisasi</span><span class="panel-controls"><a class="panel-control-loader" href="#"></a><a class="panel-control-fullscreen" href="javascript:void(0);"></a></span>
+            </div>
+            <div class="panel-body">
+              <div class="panel-body">
+                <div class="col-lg-4">
+                  <select class="form-control" name="filter_year" id="filter_year">
+                    <option value="2022">2022</option>
+                    <option value="2021" selected="selected">2021</option>
+                  </select>
+                </div>
+                <div class="form-group clearfix"></div>
+                <table border="1" class="table table-hover table-bordered table-stripped">
+                  <thead>
+                    <tr>
+                      <th>Unit</th>
+                      <th>Tanggal Tagihan</th>
+                      <th>Butuh Konfirmasi</th>
+                      <th>Status</th>
+                      <th>aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input class="form-control konfirmasi-capaian input-sm" name="KonfirmasiCapaian[unit]" id="KonfirmasiCapaian_penanggung_jawab" type="text" />
+                      </td>
+                      <td>
+                        <input class="form-control konfirmasi-capaian input-sm" name="KonfirmasiCapaian[tanggal]" id="KonfirmasiCapaian_tanggal" type="date" />
+                      </td>
+                      <td>
+                        <input class="form-control konfirmasi-capaian input-sm" name="KonfirmasiCapaian[butuh_konfirmasi]" id="KonfirmasiCapaian_butuh_konfirmasi" type="text" />
+                      </td>
+                      <td>
+                        <select class="form-control konfirmasi-capaian input-sm" id="KonfirmasiCapaian_status" name="KonfirmasiCapaian[status]">
+                          <option value="1">Pengajuan</option>
+                          <option value="2">Sudah Ada Konfirmasi</option>
+                          <option value="3">Sudah Terkirim</option>
+                          <option value="4">Tanggapan Telah Dikirimkan</option>
+                        </select>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>PENYELENGGARAAN TEKNOLOGI INFORMASI ADMINISTRASI HUKUM UMUM</td>
+                      <td>31 Januari 2021</td>
+                      <td>5850.ABO.001.051.A <i class="fa fa-check-circle"></i></td>
+                      <td>Tanggapan Telah Dikirimkan</td>
+                      <td rowspan="1">
+                        <div class="text-center">
+                          <a href="/keuangan/realisasi/KonfirmasiCapaian/detail/id/19" class="btn btn-default noborder-radius">Lihat</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>PENYELENGGARAAN TEKNOLOGI INFORMASI ADMINISTRASI HUKUM UMUM</td>
+                      <td>31 Desember 2021</td>
+                      <td>5850.ABO.001.051.B</td>
+                      <td>Pengajuan</td>
+                      <td rowspan="16">
+                        <div class="text-center"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.C</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.D</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.E</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.F</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.G</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.052.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.052.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.D</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.E</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.F</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.C</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td>PENYELENGGARAAN TEKNOLOGI INFORMASI ADMINISTRASI HUKUM UMUM</td>
+                      <td>31 Desember 2021</td>
+                      <td>5850.ABO.001.051.B</td>
+                      <td>Pengajuan</td>
+                      <td rowspan="16">
+                        <div class="text-center"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.C</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.D</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.E</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.F</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.051.G</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.052.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.ABO.001.052.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.D</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.E</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.051.F</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.A</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.B</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>5850.FAB.001.052.C</td>
+                      <td>Pengajuan</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="text-center">
+                      <nav>
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=0">Previous</a>
+                          </li>
+                          <li class="page-item active"><a class="page-link">1</a></li>
+                          <li class="page-item"><a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=2">2</a></li>
+                          <li class="page-item"><a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=3">3</a></li>
+                          <li class="page-item"><a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=4">4</a></li>
+                          <li class="page-item"><a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=5">5</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="keuangan/realisasi/KonfirmasiCapaian/list?year=2021&amp;page=2">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modalReview" role="dialog">
+            <div class="modal-dialog">
+              <form id="konfirmasi-capaian" action="/keuangan/realisasi/KonfirmasiCapaian/list?year=2021" method="post">
+                <div style="display: none"><input type="hidden" value="a88f5dfa19e1332f595b9102598e25e67bf6861c" name="mxyplyzyk7" /></div>
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Konfirmasi Capaian Realisasi</h4>
+                  </div>
+                  <div class="lds-dual-ring" id="loading"></div>
+
+                  <div class="content">
+                    <div class="modal-body">
+                      <p id="kd_subkomponen"></p>
+                      <table border="0" width="100%">
+                        <tbody>
+                          <tr>
+                            <td>Pagu</td>
+                            <td id="data-pagu"></td>
+                          </tr>
+                          <tr>
+                            <td>Realisasi</td>
+                            <td id="data-realisasi"></td>
+                          </tr>
+                          <tr>
+                            <td>Sisa Pagu</td>
+                            <td id="data-sisa-pagu"></td>
+                          </tr>
+                          <tr>
+                            <td>Persentase</td>
+                            <td id="data-persentase"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="separator"></div>
+
+                      <div class="form-group">
+                        <input type="hidden" id="konfirmasi_capaian_id" name="konfirmasi_capaian[id]" />
+                        <label for="konfirmasiCapaianRealisasi">Konfirmasi Capain Realisasi</label>
+                        <textarea class="form-control" id="konfirmasiCapaianRealisasi" name="konfirmasi_capaian[note]" rows='5"'></textarea>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-info noborder-radius">Simpan</button>
+                      <button type="button" class="btn btn-danger noborder-radius" data-dismiss="modal">Tutup</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bootstrap 3 cdn  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+
+    function getFilter(){
+        var filter = {};
+        var inputs = $('.konfirmasi-capaian');
+        $(inputs).each(function(key, input){
+            var name = $(input).attr('name');
+            // remove KonfirmasiCapaian on name 
+            name = name.replace('KonfirmasiCapaian[', '');
+            name = name.replace(']', '');
+            filter[name] = $(input).val();
+        });
+
+        var url = $.param(filter);
+        var currentUrl = window.location.href;
+        var current = new URL(currentUrl);
+
+        if(current.searchParams.get('year')){
+            var year = current.searchParams.get('year');
+            current.search = '?year='+year+'&' + url;
+        }else{
+            current.search = '?' + url;
+        }
+        // add loading on table with card bootstrap 
+        $('table tbody tr:eq(0)').html('<div class="card">adas</div>').find('tr').html('<td colspan="7" class="text-center"><div class="lds-dual-ring"></div></td>');
+        // window.location.href = current.href;
+
+    }
+        
+    $('#KonfirmasiCapaian_penanggung_jawab').keypress(function(e) {
+        if (e.which == 13) {
+            getFilter();
+        }
+    });
+    $('#KonfirmasiCapaian_tanggal').on('input', function() {
+        getFilter();
+    });
+    $('#KonfirmasiCapaian_butuh_konfirmasi').keypress(function(e) {
+        if (e.which == 13) {
+            getFilter();
+        }
+    });
+    $('#KonfirmasiCapaian_status').change(function(e) {
+        getFilter();
+    });
+    </script>
+  </body>
+</html>

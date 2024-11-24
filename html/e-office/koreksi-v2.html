@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 3 cdn  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form action="/keuangan/rkakl/mapper/save" method="POST" class="form-horizontal" id="renkasSaveForm">
+        <input type="hidden" class="tipe_simpan" id="tipe_simpan" name="tipe_simpan" value="">
+        <input type="hidden" id="kode_filter" name="kode_filter" value="1575.ABD.001.051.C.524211">
+        <div class="col-lg-12">&nbsp;</div>
+        <div class="col-lg-12 row" style="overflow-y:scroll;max-height:400px;">
+            <div class="col-lg-6">
+                <table class="table table-bordered" id="table-current" tabindex="5">
+                    <thead>
+                        <tr style="background-color:#ddd" x-selectable="1" x-draggable="1">
+                            <th colspan="4" class="text-center col-xs-12">VERSI 4</th>
+                        </tr>
+                        <tr style="background-color:#efefef" x-selectable="1" x-draggable="1">
+                            <th class="col-xs-1">Id</th>
+                            <th class="col-xs-3">Kode</th>
+                            <th class="col-xs-6">Item</th>
+                            <th class="col-xs-2">Nominal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="connectedSortable">
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                553545 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnExit"><i
+                                        class="fa fa-arrow-down"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.1_01.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">Los Angeles</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667248 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.2_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.2">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                218,790,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667249 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.3_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.3">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                249,180,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667250 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.4_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.4">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667251 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.5_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.5">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                83,160,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667252 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.6_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.6">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                81,270,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667253 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.7_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.7">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                244,860,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667254 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.8_01 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.8">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                12,000,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                667255 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnExit"><i
+                                        class="fa fa-arrow-down"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.9_02.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">TAIWAN</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667256 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.10_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.10">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667257 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.11_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.11">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                54,090,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667258 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.12_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.12">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                45,630,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667259 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.13_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.13">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                162,360,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667260 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.14_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.14">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">9,000,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667261 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.15_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.15">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                78,990,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667262 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.16_02 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.16">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                75,420,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                667263 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnExit"><i
+                                        class="fa fa-arrow-down"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.17_03.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">HOUSTON</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667264 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.18_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.18">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                215,460,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667265 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.19_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.19">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667266 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.20_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.20">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                69,195,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                667267 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.21_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.21">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                59,115,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665861 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.22_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.22">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                212,100,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665862 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.23_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.23">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                12,000,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665863 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.24_03 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.24">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                194,610,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                665864 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnExit"><i
+                                        class="fa fa-arrow-down"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.25_04.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">SINGAPURA</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665865 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.26_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.26">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Tiket Es. I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                20,190,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665866 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.27_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.27">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Tiket Es IV</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                24,180,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665867 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.28_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.28">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Taksi</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665868 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.29_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.29">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                55,350,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665869 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.30_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.30">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                46,710,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665870 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.31_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.31">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                165,960,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center" style="background-color:none;color:#000;"
+                                nowrap="">
+                                665871 <br>
+                                <button type="button" class="btn btn-danger btn-xs btnDel"><i
+                                        class="fa fa-minus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.32_04 <input type="hidden" name="rkakl[4][]"
+                                    value="1575.ABD.001.051.C.524211.32">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Biaya Visa</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">9,000,000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <table class="table table-bordered" id="table-revisi" tabindex="6">
+                    <thead>
+                        <tr style="background-color:#ddd" x-selectable="1" x-draggable="1">
+                            <th colspan="4" class="text-center col-xs-12">REVISI 5</th>
+                        </tr>
+                        <tr style="background-color:#efefef" x-selectable="1" x-draggable="1">
+                            <th class="col-xs-1">Id</th>
+                            <th class="col-xs-3">Kode</th>
+                            <th class="col-xs-6">Item</th>
+                            <th class="col-xs-2">Nominal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                559077 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.1_01.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">Los Angeles</td>
+                        </tr>
+                        <!-- <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673336 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.2_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.2">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                218,790,000</td>
+                        </tr> -->
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673337 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.3_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.3">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                249,180,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673338 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.4_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.4">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673339 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.5_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.5">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                83,160,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673340 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.6_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.6">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                81,270,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673341 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.7_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.7">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                244,860,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673342 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.8_01 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.8">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                12,000,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673343 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.9_02.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">TAIWAN</td>
+                        </tr>
+                        <!-- <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673344 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.10_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.10">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr> -->
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673345 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.11_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.11">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                54,090,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673346 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.12_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.12">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                45,630,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673347 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.13_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.13">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                162,360,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673348 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.14_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.14">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">9,000,000
+                            </td>
+                        </tr>
+                        <!-- <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673349 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.15_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.15">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                78,990,000</td>
+                        </tr> -->
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673350 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.16_02 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.16">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                75,420,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673351 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.17_03.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">HOUSTON</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673352 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.18_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.18">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET IV KEBAWAH</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                215,460,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673353 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.19_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.19">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TAKSI</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673354 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.20_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.20">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                69,195,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                673355 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.21_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.21">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                59,115,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671949 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.22_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.22">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">UANG HARIAN GOL C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                212,100,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671950 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.23_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.23">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">BIAYA VISA</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                12,000,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671951 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.24_03 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.24">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">TIKET ES I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                194,610,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671952 <br>
+                                <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.25_04.1 </td>
+                            <td colspan="2" class="drag_handle col-xs-8" style="font-weight:bold;">SINGAPURA</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671953 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.26_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.26">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Tiket Es. I, II, III</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                20,190,000</td>
+                        </tr>
+                        <!-- <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671954 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.27_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.27">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Tiket Es IV</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                24,180,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671955 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.28_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.28">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Taksi</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">3,072,000
+                            </td>
+                        </tr> -->
+                        <!-- <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671956 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.29_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.29">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol A</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                55,350,000</td>
+                        </tr> -->
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671957 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.30_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.30">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol B</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                46,710,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671958 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.31_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.31">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Uang Harian Gol C</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">
+                                165,960,000</td>
+                        </tr>
+                        <tr x-selectable="1" x-draggable="1">
+                            <td class="drag_handle col-xs-1 text-center">
+                                671959 <button type="button" class="btn btn-primary btn-xs btnAdd"><i
+                                        class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="drag_handle col-xs-3" style="font-weight:bold;">
+                                1575.ABD.001.051.C.524211.32_04 <input type="hidden" name="rkakl[5][]"
+                                    value="1575.ABD.001.051.C.524211.32">
+                            </td>
+                            <td class="drag_handle col-xs-6" style="font-weight:bold;">Biaya Visa</td>
+                            <td class="drag_handle col-xs-2" align="right" style="font-weight:bold;color:red;">9,000,000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-12">&nbsp;</div>
+        <div class="col-lg-12">&nbsp;</div>
+        <div class="col-lg-12 row" style="overflow-y:scroll;max-height:200px;">
+            <div class="col-lg-6">
+                <table class="table table-bordered" id="table-current-del">
+                    <thead>
+                        <tr style="background-color:#ddd">
+                            <th colspan="4" class="text-center col-xs-12">RENKAS ITEM DIHAPUS / DISIMPAN DI VERSI 4</th>
+                        </tr>
+                        <tr style="background-color:#efefef">
+                            <th class="col-xs-1">Id</th>
+                            <th class="col-xs-3">Kode</th>
+                            <th class="col-xs-6">Item</th>
+                            <th class="col-xs-2">Nominal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="connectedSortable">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <table class="table table-bordered" id="table-revisi-add">
+                    <thead>
+                        <tr style="background-color:#ddd">
+                            <th colspan="4" class="text-center col-xs-12">ITEM BARU DI REVISI 5</th>
+                        </tr>
+                        <tr style="background-color:#efefef">
+                            <th class="col-xs-1">Id</th>
+                            <th class="col-xs-3">Kode</th>
+                            <th class="col-xs-6">Item</th>
+                            <th class="col-xs-2">Nominal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-12">&nbsp;</div>
+        <div class="col-lg-12 text-center">
+            <button type="button" class="btn btn-success" id="koreksi"><span class="loader2"></span>Koreksi</button>
+            <button type="submit" class="btn btn-danger saver" value="hapus_item"><span class="loader2"></span>Hapus
+                Item Tak Terpakai</button>
+            <button type="submit" class="btn btn-warning saver" value="tambah"><span class="loader2"></span>Tambah Semua
+                Item Baru</button>
+            <!-- <button type="submit" class="btn btn-success saver" value="simpan_sama"><span class="loader2"></span>Simpan Nilai Kolom Sama</button> -->
+            <button type="submit" class="btn btn-primary saver" value="simpan"><span
+                    class="loader2"></span>Simpan</button>
+        </div>
+    </form>
+
+    <!-- bootstrap modal hide -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Koreksi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="message-koreksi"></div>
+                    <form>
+                        <div class="row">
+                            <div class="col-6">
+                                Sebelum
+                            </div>
+                            <div class="col-6">
+                                Menjadi
+                            </div>
+                        </div>
+                        <div id="koreksi-data">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-secondary tutup" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery 3.6 cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- bootstrap 3 js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+
+        $('#koreksi').click(function (e) {
+            var current = [];
+            var revisi = [];
+            var have_header = [];
+
+            $('#table-current tbody tr').each(function (i, v) {
+                if ($(this).find('td:eq(2)').prop("colSpan") > 1) {
+                    var key_header = $(this).find('td:eq(1)').text().trim().split('_').pop().split('.').shift();
+                    have_header.push({
+                        key: key_header,
+                        value: $(this).find('td:eq(2)').text().trim(),
+                    });
+                } else {
+                    current.push({
+                        id: $(v).find('td:eq(0)').text().trim(),
+                        kode: $(v).find('td:eq(1)').text().trim(),
+                        item: $(v).find('td:eq(2)').text().trim(),
+                        nominal: $(v).find('td:eq(3)').text().trim(),
+                        indexHeader: $(v).find('td:eq(2)').prop("colSpan"),
+                    })
+                }
+            });
+
+            $('#table-revisi tbody tr').each(function (i, v) {
+                revisi.push({
+                    id: $(v).find('td:eq(0)').text().trim(),
+                    kode: $(v).find('td:eq(1)').text().trim(),
+                    item: $(v).find('td:eq(2)').text().trim(),
+                    nominal: $(v).find('td:eq(3)').text().trim()
+                })
+            });
+
+            // array column kode
+            var current_kode = [];
+            var revisi_kode = [];
+            $.each(current, function (i, v) {
+                current_kode.push(v.kode);
+            });
+            $.each(revisi, function (i, v) {
+                revisi_kode.push(v.kode);
+            });
+
+            // array column item
+            var revisi_item = [];
+            $.each(revisi, function (i, v) {
+                revisi_item.push(v.item);
+            });
+
+            // // compare kode
+            var kode_beda = [];
+            $.each(current, function (i, v) {
+                if ($.inArray(v.kode, revisi_kode) == -1) {
+                    delete current[i];
+                    kode_beda.push(v);
+                } else if ($.inArray(v.kode, revisi_kode) != -1 && $.inArray(v.item, revisi_item) == -1) {
+                    delete current[i];
+                    kode_beda.push(v);
+                }
+            });
+
+            var option = '';
+            if (have_header.length > 0) {
+                $.each(have_header, function (i, v) {
+                    option += '<optgroup label="' + v.value + '">';
+                    $.each(current, function (i, v2) {
+                        if (v2) {
+                            if (v.key == v2.kode.split('_').pop().split('.').shift()) {
+                                option += '<option name="sesudah[]" value="' + v2.kode + '" data-id="' + v2.id + '" data-nominal="' + v2.nominal + '">' + v2.item + '</option>';
+                            }
+                        }
+                    });
+                });
+            } else {
+                $.each(current, function (i, v) {
+                    if (v) {
+                        option += '<option name="sesudah[]" value="' + v.kode + '" data-id="' + v.id + '" data-nominal="' + v.nominal + '">' + v.item + '</option>';
+                    }
+                });
+            }
+
+            var html = '';
+            // loop kode beda
+            $.each(kode_beda, function (i, v) {
+                html += `<div class="row mt-3">`;
+
+                if (have_header.length > 0) {
+                    var index_header = v.kode.split('_');
+                    if (index_header.length > 1) {
+                        var find_index_lable = have_header.findIndex(x => x.key == index_header[1]);
+                        if (find_index_lable != -1) {
+                            html += `<div class="col-12"><b>${have_header[find_index_lable].value}</b></div>`;
+                            have_header.splice(find_index_lable, 1);
+                        }
+                    }
+                }
+
+                html += `<div class='col-6'>
+                                <input name="sebelum[]" type='text' class='form-control' id='kode_sebelum' readonly value='${v.item}' data-id='${v.id}'
+                                data-nominal='${v.nominal}' data-kode='${v.kode}'>
+                            </div>
+                            <div class='col-6'>
+                                <select type='text' class='form-control' id='kode_menjadi'>`;
+                html += option;
+                html += `</select >
+                            </div >
+                        </div >`;
+            });
+
+            $('#koreksi-data').html(html);
+
+            $('#exampleModal').modal('show');
+        })
+    </script>
+</body>
+
+</html>

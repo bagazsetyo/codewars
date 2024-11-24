@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="my_img" src="../../assets/img/images.jpg" />
+
+    <!-- include jQuery - better done in the head -->
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+    <script language="javascript">
+        // var i = document.getElementById('my_img');
+        // $.get(i.src, function (data, status, xhr) {
+        //     // in the callback - after the ajax request completes...
+        //     var filetime = xhr.getResponseHeader('Last-Modified');
+        //     i.title = 'image created: ' + filetime; // don't care about formating now
+        //     console.log(status, xhr);
+        // })
+        var fileInput = document.getElementById("my_img")
+        var file = fileInput.files[0]
+        var lastModified = fileInput.files[0].lastModified
+
+        console.log(lastModified);
+    </script>
+</body>
+
+</html>

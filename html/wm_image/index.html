@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+    <title>Text Over Image with CSS and JavaScript</title>
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <style>
+        .mainContainer {
+            position: relative;
+            padding: 0;
+            min-width: 250px;
+            min-height: 250px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        img {border: none; max-width: 100%;}
+        
+        #textArea {
+            display: block;
+            padding: 10px 5px;
+        }
+        
+        #theText {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            background: green;
+            background: rgba(0, 0, 0, 0.1);
+            color: red;
+            width: auto;
+            padding: 5px;
+            text-align: left;
+            border: dashed 2px #ff7f27;
+            font-size: 45px;
+            font-family: 'Nabla';
+            display: block;
+            cursor: move;
+        }
+        
+        canvas {max-width: 100%;}
+
+        /* switch style */
+        
+        /** Switch
+        -------------------------------------*/
+
+        .switch input {
+        position: absolute;
+        opacity: 0;
+        }
+
+        /**
+        * 1. Adjust this to size
+        */
+
+        .switch {
+        display: inline-block;
+        font-size: 20px; /* 1 */
+        height: 1em;
+        width: 2em;
+        background: #BDB9A6;
+        border-radius: 1em;
+        }
+
+        .switch div {
+        height: 1em;
+        width: 1em;
+        border-radius: 1em;
+        background: #FFF;
+        box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+        -webkit-transition: all 300ms;
+            -moz-transition: all 300ms;
+                transition: all 300ms;
+        }
+
+        .switch input:checked + div {
+        -webkit-transform: translate3d(100%, 0, 0);
+            -moz-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="setting">
+        <h1><b>Setting</b></h1>
+
+        <!-- switces on off -->
+        <label class="switch">
+            <input type="checkbox" id="switch-setting" checked />    
+            <div></div>
+        </label>
+
+        <div id="content-setting">
+            <div style="display: flex; gap: 10px;">
+                <label for="">Warna</label>
+                <input type="color" id="color-text">
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <label for="">Font Size</label>
+                <input type="range" id="font-size" min="0" max="99" step="1" value="10">
+                <label id="range-value"></label>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <label for="">Font Family</label>
+                <select id="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+                <!-- input font family from api google fonts -->
+                <input type="text" id="google-fonts">
+            </div>
+        </div>
+    </div>
+    <!--File upload-->
+    <p style="margin:20px 0;">
+        <input type="submit"  id="btChooseImage" onclick='chooseImage()' value="Select an image" />
+    </p>
+    <input type="file" id="file" onchange="showImage(this)" 
+        style="display: none; visibility: hidden; width: 1px;" />
+
+    <!--Textarea to enter some texts.-->
+    <p>
+        <textarea onkeyup='writeText(this)' id='textArea' 
+            placeholder='Enter some value for text' rows='2' cols='50'>
+        </textarea>
+    </p>
+
+    <div>
+        <!--The parent container, image and container for text (to place over the image)-->
+        <div class="mainContainer" id='mainContainer'>
+
+            <!--The default image. You can select a different image too.-->
+            <img src="https://www.encodedna.com/images/theme/easy-image-resizer.jpg" 
+                id="myimage" alt="" />
+            
+            <!--The text, which is also draggable.-->
+            <div id='theText' onmousedown='this.style.border = "dashed 2px #FF7F27";'>sample text</div>
+        </div>
+
+        <!--Button to save the image with the text.-->
+        <p>
+            <input type="button"  onclick="saveImageWithText();" id="bt" value="Save the Image" /> 
+        </p>
+        <img src="" id="base64" alt="">
+        <textarea id="area" cols="30" rows="10"></textarea>
+    </div>
+</body>
+
+<!--THE SCRIPT SECTION.-->
+<script>
+    // Make the text element draggable.
+    $(document).ready(function() {
+        $(function() { 
+            $('#theText').draggable({
+                containment: 'parent'     // set draggable area. Ref: https://www.encodedna.com/jquery/limit-the-draggable-area-using-jquery-ui.htm 
+            }); 
+        });
+    });
+
+    // setting 
+        // color
+        var color = document.getElementById('color-text');
+        color.addEventListener('input', function(){
+            document.getElementById('theText').style.color = color.value;
+            document.getElementById('theText').style.borderColor = color.value;
+        });
+        // font size
+        var fontSize = document.getElementById('font-size');
+        var rangeValue = document.getElementById('range-value');
+        rangeValue.innerHTML = fontSize.value;
+        fontSize.addEventListener('input', function(){
+            rangeValue.innerHTML = fontSize.value;
+            document.getElementById('theText').style.fontSize = fontSize.value + 'px';
+        });
+        // font family
+        var fontFamily = document.getElementById('font-family');
+        fontFamily.addEventListener('input', function(){
+            document.getElementById('theText').style.fontFamily = fontFamily.value;
+        });
+        // google fonts
+        var googleFonts = document.getElementById('google-fonts');
+        googleFonts.addEventListener('input', function(){
+            // document.getElementById('theText').style.fontFamily = googleFonts.value;
+            // console.log(googleFonts.value);
+            // https://fonts.googleapis.com/css2?family=DM+Sans&display=swap
+            var link = "@import url('"+googleFonts.value+"')";
+            // import link to Style
+            var style = document.createElement('style');
+            style.innerHTML = link;
+            document.head.appendChild(style);
+            
+            var url = new URL(googleFonts.value);
+            var params = new URLSearchParams(url.search);
+            var family = params.get('family');
+
+            // add family to dropdown option 
+            var option = document.createElement('option');
+            option.value = family;
+            option.innerHTML = family;
+            document.getElementById('theText').style.fontFamily = family;
+        });
+
+        // switch setting
+        var switchSetting = document.getElementById('switch-setting');
+        var contentSetting = document.getElementById('content-setting');
+        switchSetting.addEventListener('change', function(){
+            if(switchSetting.checked){
+                contentSetting.style.display = 'block';
+            }else{
+                contentSetting.style.display = 'none';
+            }
+        });
+
+
+    // Select image and show it.
+    let chooseImage = () => {
+    	document.getElementById('file').click();
+    }
+
+    let showImage = (fl) => {
+        if (fl.files.length > 0) {
+            let reader  = new FileReader();
+
+            reader.onload = function (e) {
+                let img = new Image();
+                
+                img.onload = function () {
+                    if (this.width > screen.width || this.height > screen.height) {
+                        alert('Please select a small image. The image width and height should be less than the screen width and height.');
+
+                        document.getElementById('theText').style.display = 'none';
+                        document.getElementById('bt').style.display = 'none';
+                        document.getElementById('textArea').style.display = 'none';
+                        document.getElementById('myimage').src = '';
+                    }
+                    else {
+                        document.getElementById('theText').style.display = 'block';
+                        document.getElementById('bt').style.display = 'block';
+                        document.getElementById('textArea').style.display = 'block';
+                    }
+                }
+
+                img.src = e.target.result;      // actual image. 
+                document.getElementById('myimage').src = reader.result;  // Add the image on the form.
+            };
+            reader.readAsDataURL(fl.files[0]);
+        }
+    }
+
+    let textContainer;
+    let t = 'sample text';
+
+    // Get the values that you have entered in the textarea and
+    // write it in the DIV over the image.
+
+    let writeText = (ele) => {
+        t = ele.value;
+        document.getElementById('theText').innerHTML = t.replace(/\n\r?/g, '<br />');
+    }
+ 
+    // Finally, save the image with text over it.
+    let saveImageWithText = () => {
+
+        textContainer = document.getElementById('theText');     // The element with the text.
+    
+        // Create an image object.
+        let img = new Image();
+        img.src = document.getElementById('myimage').src;
+       
+        // Create a canvas object.
+        let canvas = document.createElement("canvas");
+        
+        // Wait till the image is loaded.
+        img.onload = function(){
+            drawImage();
+            downloadImage(img.src.replace(/^.*[\\\/]/, ''));    // Download the processed image.
+        }
+        
+        // Draw the image on the canvas.
+        let drawImage = () => {
+            let ctx = canvas.getContext("2d");	// Create canvas context.
+
+            // Assign width and height.
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+          	// Draw the image.
+            ctx.drawImage(img, 0, 0);
+            
+            textContainer.style.border = 0;
+            
+            // Get the padding etc.
+            let left = parseInt(window.getComputedStyle(textContainer).left);
+            let right = textContainer.getBoundingClientRect().right;
+            let top = parseInt(window.getComputedStyle(textContainer).top, 0);
+            let center = textContainer.getBoundingClientRect().width / 2;
+
+            let paddingTop = window.getComputedStyle(textContainer).paddingTop.replace('px', '');
+            let paddingLeft = window.getComputedStyle(textContainer).paddingLeft.replace('px', '');
+            let paddingRight = window.getComputedStyle(textContainer).paddingRight.replace('px', '');
+            
+            // Get text alignement, colour and font of the text.
+            let txtAlign = window.getComputedStyle(textContainer).textAlign;
+            let color = window.getComputedStyle(textContainer).color;
+            let fnt = window.getComputedStyle(textContainer).font;
+           
+            // Assign text properties to the context.
+            ctx.font = fnt;
+            ctx.fillStyle = color;
+            ctx.textAlign = txtAlign;
+			
+            // Now, we need the coordinates of the text.
+            let x; 		// coordinate.
+            if (txtAlign === 'right') {
+            	x = right + parseInt(paddingRight) - 11;
+            }
+            if (txtAlign === 'left') {
+            	x = left + parseInt(paddingLeft);
+            }
+            if (txtAlign === 'center') {
+            	x = center + left;
+            }
+
+            // Get the text (it can a word or a sentence) to write over the image.
+            let str = t.replace(/\n\r?/g, '<br />').split('<br />');
+
+            // finally, draw the text using Canvas fillText() method.
+            for (let i = 0; i <= str.length - 1; i++) {
+            	
+                ctx.fillText(
+                    str[i]
+                        .replace('</div>','')
+                        .replace('<br>', '')
+                        .replace(';',''), 
+                    x, 
+                    parseInt(paddingTop, 10) + parseInt(top, 10) + 10 + (i * 15));
+            }
+
+            // document.body.append(canvas);  // Show the image with the text on the Canvas.
+        }
+
+        // Download the processed image.
+        let downloadImage = (img_name) => {
+            try{
+                
+                // get file with file reader and print result 
+                var file = document.getElementById('file').files[0];
+                // var reader = new FileReader();
+                console.log(file);
+
+                // reader.onload = function(e) {
+                //     console.log(e.target.result);
+                // }
+
+                let a = document.createElement('a');
+                a.href = canvas.toDataURL("image/png");
+                a.download = img_name;
+                document.body.appendChild(a);
+                // image harus di upload dari lokal agar menjadi base64
+                // console.log(canvas.toDataURL("image/png"));
+                // a.click();    
+                
+                // dataurl to id  base64
+                document.getElementById('base64').src = canvas.toDataURL("image/png"); 
+                document.getElementById('area').value = canvas.toDataURL("image/png"); 
+            }catch(e){
+                alert('Gambar harus di upload dari lokal agar menjadi base64');
+                console.log(e);
+            }
+        }
+
+    }
+</script>
+</html>

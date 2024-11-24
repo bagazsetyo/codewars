@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 4 cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="" method="POST">
+        <table style="width: 100%">
+            <thead>
+                <tr style="border-bottom: 1px solid #666">
+                    <th style="padding-bottom: 20px;">Pernyataan Upload File</th>
+                    <th colspan="4" style="text-align:center; width:600px; padding-bottom: 20px;">
+                        <input type="checkbox" id="cekAll" autocomplete="off"> Pilih Sesuai Semua
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <th style="text-align: center; border-left: 1px solid #666;">&nbsp;</th>
+                    <th style="text-align: center; border-left: 1px solid #666;">Sesuai</th>
+                    <th style="text-align: center; border-left: 1px solid #666;">Tidak<br>Sesuai</th>
+                    <th style="text-align: center; border-left: 1px solid #666;">Ditolak</th>
+                    <th style="text-align: center;border-left: 1px solid #666;">Alasan Sebelumnya</th>
+                    <th style="text-align: center; border-left: 1px solid #666;border-right: 1px solid #666;">keterangan
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">1. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Fotokopi kutipan akta kelahiran atau surat yang membuktikan kelahiran pemohon
+                                        yang
+                                        dilegalisasi oleh Perwakilan Republik Indonesia <span class="required"
+                                            style="color: #f00;">*</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684115-UploadNg__upload_akta_lahir_p23_h_new-3f442047ec386f1b3cd471653bcc843b.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_akta_lahir_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_akta_lahir_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_akta_lahir_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_akta_lahir_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_akta_lahir_p23_h_new][status]" autocomplete="off"> <label
+                                for="Verifikasi_upload_akta_lahir_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_akta_lahir_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_akta_lahir_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_akta_lahir_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_akta_lahir_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_akta_lahir_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_akta_lahir_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class="fokusyos"
+                            name="Verifikasi[upload_akta_lahir_p23_h_new][ket]"
+                            id="Verifikasi_upload_akta_lahir_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">2. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Fotokopi kutipan akta perkawinan/ buku nikah, kutipan akta perceraian, atau
+                                        kutipan
+                                        akta kematian istri/suami pemohon yang dilegalisasi oleh Perwakilan Republik
+                                        Indonesia <span class="required" style="color: #f00;">*</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684117-UploadNg__upload_akta_perkawinan_p23_h_new-61eb991549979063e7331c256660c0c8.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_akta_perkawinan_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_akta_perkawinan_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_akta_perkawinan_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_akta_perkawinan_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_akta_perkawinan_p23_h_new][status]" autocomplete="off"> <label
+                                for="Verifikasi_upload_akta_perkawinan_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_akta_perkawinan_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_akta_perkawinan_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_akta_perkawinan_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_akta_perkawinan_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_akta_perkawinan_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_akta_perkawinan_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_akta_perkawinan_p23_h_new][ket]"
+                            id="Verifikasi_upload_akta_perkawinan_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">3. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Fotokopi dokumen perjalanan Republik Indonesia atau Kartu Tanda Penduduk yang
+                                        sudah
+                                        diverifikasi oleh Perwakilan Republik Indonesia <span class="required"
+                                            style="color: #f00;">*</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684120-UploadNg__upload_ktp_p23_h_new-af08593f3621bdd58e3cfcd89271a235.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_ktp_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_ktp_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_ktp_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_ktp_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_ktp_p23_h_new][status]" autocomplete="off"> <label
+                                for="Verifikasi_upload_ktp_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_ktp_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_ktp_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_ktp_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_ktp_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_ktp_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_ktp_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_ktp_p23_h_new][ket]"
+                            id="Verifikasi_upload_ktp_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">4. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Surat keterangan dari pejabat negara asing bahwa dengan kehilangan
+                                        Kewarganegaraan
+                                        Republik Indonesia pemohon akan menjadi warga negara asing <span
+                                            class="required" style="color: #f00;">*</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684122-UploadNg__upload_tidak_memiliki_nik_p23_h_new-f5959243218629a408ec7ad69e7c1f6f.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_tidak_memiliki_nik_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_tidak_memiliki_nik_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_tidak_memiliki_nik_p23_h_new][status]" autocomplete="off">
+                            <label for="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_tidak_memiliki_nik_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_tidak_memiliki_nik_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_tidak_memiliki_nik_p23_h_new][ket]"
+                            id="Verifikasi_upload_tidak_memiliki_nik_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">5. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Fotokopi Paspor Asing yang dilegalisasi oleh Perwakilan negara yang mengeluarkan
+                                        <span class="required" style="color: #f00;">*</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684124-UploadNg__upload_pasport_asing_p23_h_new-ab1ef9e28731a11728a4b28807616ad3.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_pasport_asing_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_pasport_asing_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_pasport_asing_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_pasport_asing_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_pasport_asing_p23_h_new][status]" autocomplete="off"> <label
+                                for="Verifikasi_upload_pasport_asing_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pasport_asing_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_pasport_asing_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_pasport_asing_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pasport_asing_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_pasport_asing_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_pasport_asing_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_pasport_asing_p23_h_new][ket]"
+                            id="Verifikasi_upload_pasport_asing_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">6. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Bukti pengembalian paspor Indonesia dari Kantor Imigrasi atau Perwakilan Repubik
+                                        Indonesia <span class="required" style="color: #f00;">*</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684127-UploadNg__upload_pengembalian_pasport_indonesia_p23_h_new-2492a7a9e4bb4f1d190ae4ec33b6f4d9.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status" type="hidden"
+                            value="" name="Verifikasi[upload_pengembalian_pasport_indonesia_p23_h_new][status]"
+                            autocomplete="off"><span
+                            id="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_0" value="1"
+                                type="radio" name="Verifikasi[upload_pengembalian_pasport_indonesia_p23_h_new][status]"
+                                autocomplete="off"> <label
+                                for="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_1" value="2"
+                            type="radio" name="Verifikasi[upload_pengembalian_pasport_indonesia_p23_h_new][status]"
+                            autocomplete="off">
+                        <label for="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_1"></label>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_2" value="3"
+                            type="radio" name="Verifikasi[upload_pengembalian_pasport_indonesia_p23_h_new][status]"
+                            autocomplete="off">
+                        <label for="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_status_2"></label>
+                    </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_pengembalian_pasport_indonesia_p23_h_new][ket]"
+                            id="Verifikasi_upload_pengembalian_pasport_indonesia_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid #666">
+                    <td style="width: 40%;padding-left: 5px;text-align: justify;padding-top: 5px;border-left: 1px solid #666;padding-right: 5px;padding-bottom: 5px;"
+                        valign="top">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td valign="top">7. </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td>Pasfoto pemohon terbaru berwarna berukuran 4x6 cm (empat kali enam sentimeter)
+                                        sebanyak 6 (enam) lembar <span class="required" style="color: #f00;">*</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <article class="media">
+                            <div class="media-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>
+                                                <a class="p-head btn btn-primary btn-xs" target="blank"
+                                                    style="color: #fff;"
+                                                    href="/uploads/kewarganegaraan/1659684130-UploadNg__upload_pasfoto_p23_h_new-3a752bc2da70dc76e03515f96758aa6d.jpg">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </td>
+
+                    <td style="text-align: center; border-left: 1px solid #666;">
+                        <input id="ytVerifikasi_upload_pasfoto_p23_h_new_status" type="hidden" value=""
+                            name="Verifikasi[upload_pasfoto_p23_h_new][status]" autocomplete="off"><span
+                            id="Verifikasi_upload_pasfoto_p23_h_new_status"><input class="cek"
+                                id="Verifikasi_upload_pasfoto_p23_h_new_status_0" value="1" type="radio"
+                                name="Verifikasi[upload_pasfoto_p23_h_new][status]" autocomplete="off"> <label
+                                for="Verifikasi_upload_pasfoto_p23_h_new_status_0"></label></span>
+                    </td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pasfoto_p23_h_new_status_1" value="2" type="radio"
+                            name="Verifikasi[upload_pasfoto_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_pasfoto_p23_h_new_status_1"></label></td>
+                    <td style="text-align: center; border-left: 1px solid #666;padding-left: 10px;"><input class="cek"
+                            id="Verifikasi_upload_pasfoto_p23_h_new_status_2" value="3" type="radio"
+                            name="Verifikasi[upload_pasfoto_p23_h_new][status]" autocomplete="off"> <label
+                            for="Verifikasi_upload_pasfoto_p23_h_new_status_2"></label> </td>
+                    <td style="text-align: justify;width:20%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        Tidak Ada Catatan </td>
+                    <td style="text-align: justify;width:32%;border-left: 1px solid #666;padding-left: 5px;padding-right: 5px;padding-top: 5px;border-right: 1px solid #666;"
+                        valign="top">
+                        <textarea style="resize: none; width:100%; height:100%;" class=""
+                            name="Verifikasi[upload_pasfoto_p23_h_new][ket]"
+                            id="Verifikasi_upload_pasfoto_p23_h_new_ket"></textarea>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        <div class="col-lg-6 text-left" style="border: 1px solid #000; padding: 10px">
+                            <div class="col-lg-12">
+                                <p></p>
+                                <h3>Riwayat Pesan</h3>Tidak Ada Catatan<br>
+                                <hr>
+                                <p></p>
+                            </div>
+                            <div class="col-lg-12">
+                                <p></p>
+                                <h3></h3>
+                                <h3>Pesan Verifikasi PBK</h3>
+                                <div class="m-bot20" style="font-size: 12px;"><b style="color: red;">PBK</b> pada 05
+                                    Agustus
+                                    2022 14:33:48</div>ok<br>
+                                <p></p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-6">
+                                <input class="sendBackVerif btn btn-info" name="yt0" type="button" value="KEMBALIKAN"
+                                    autocomplete="off">
+                            </div>
+                            <div class="col-lg-6">
+                                <span style="color: red">*Verifikasi akan dikembalikan ke step sebelumnya untuk
+                                    pengecekan
+                                    kembali berkas yang sudah diverifikasi</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        <table border="1" style="width: 300px; margin: 20px auto; text-align: center;">
+                            <thead style="background: #ccc;">
+                                <tr>
+                                    <th style="text-align: center;">Mengetahui</th>
+                                    <th style="text-align: center;">Paraf</th>
+                                    <th style="text-align: center;">Tanggal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PBK</td>
+                                    <td><img src="/images/ttdkumham.png" width="80"></td>
+                                    <td>05 Agustus 2022 14:33:48</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="5">
+                        <div class="col-lg-12 text-center">
+                            <a class="btn btn-default" href="/listPermohonan/permohonanVerifikasi">Kembali</a>
+                            <input class="save_verif btn btn-primary" name="yt1" type="button" value="Simpan"
+                                autocomplete="off">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <!-- jquery 3 cdn js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $('input[type="button"').click(function () {
+
+            var radio_checked = $('input[type="radio"]:checked');
+
+            radio_checked.each(function (e) {
+                var value = $(this).val();
+                if (value > 1) {
+                    var parent = $(this).parent().parent();
+                    var textarea = parent.find('textarea');
+                    var textarea_value = textarea.val();
+
+                    if (textarea_value == '') {
+                        alert('Keterangan pada pernyataan upload file dengan status tidak sesuai / ditolak harus diisi');
+                        return false;
+                    }
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

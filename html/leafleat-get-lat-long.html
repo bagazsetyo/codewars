@@ -1,0 +1,30 @@
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+<!-- in it i draw map -->
+<div id="map" style="height:400px; width:900px"></div>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png', {
+        maxZoom: 18,
+        attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    }).addTo(map);
+// first i try the on zoomend event to get lat, lng
+
+map.on('zoomend',function(e){
+
+console.log(e.target.getZoom());
+
+})
+
+map.on('click', function(ev){
+var coordinates = map.mouseEventToLatLng(ev.originalEvent);
+console.log(coordinates.lat + ', ' + coordinates.lng);
+});
+</script>
+
+
+
+

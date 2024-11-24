@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 4 cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <form method="post" class="table-responsive" style="overflow-x: scroll;">
+        <table class="table table-bordered" style="margin-bottom: 15px;">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th style="border-left: 1px solid #000 !important;">Airport Tax</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="airport_tax" name="" style="width:auto;" class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                    <th style="border-left: 1px solid #000 !important;">Taksi</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="taksi" name="" style="width:auto;" class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                    <th style="border-left: 1px solid #000 !important;">Tiket Rupiah</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="tiket_rupiah" name="" style="width:auto;" class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                    <th style="border-left: 1px solid #000 !important;">Uang Harian Rupiah</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="uang_harian_rupiah" name="" style="width:auto;"
+                            class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                    <th style="border-left: 1px solid #000 !important;">Uang Representasi</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="uang_representasi" name="" style="width:auto;"
+                            class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                    <th style="border-left: 1px solid #000 !important;">Visa</th>
+                    <th style="border-left: 1px solid #000 !important;">
+                        <select id="visa" name="" style="width:auto;" class="form-control input-sm select-all">
+                            <option value="">Pilih</option>
+                            <option value="125525"> Tiket Gol B </option>
+                            <option value="125527"> Uang Harian Es II </option>
+                            <option value="125530"> Visa </option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Ajun Roni Prasetyo, S.H., M.H.</th>
+                    <td style="border-left: 1px solid #000 !important;">1,000,000</td>
+                    <td>
+                        <select class="form-control input-sm airport_tax" name="renkas_details[341914]"
+                            id="renkas_details_341914">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530" selected="selected">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">2,500,000</td>
+                    <td>
+                        <select class="form-control input-sm taksi" name="renkas_details[341915]"
+                            id="renkas_details_341915">
+                            <option value="">PILIH</option>
+                            <option value="125525" selected="selected">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">22,500,000</td>
+                    <td>
+                        <select class="form-control input-sm tiket_rupiah" name="renkas_details[341916]"
+                            id="renkas_details_341916">
+                            <option value="">PILIH</option>
+                            <option value="125525" selected="selected">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">30,000,000</td>
+                    <td>
+                        <select class="form-control input-sm uang_harian_rupiah" name="renkas_details[341917]"
+                            id="renkas_details_341917">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527" selected="selected">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">1,000,000</td>
+                    <td>
+                        <select class="form-control input-sm uang_representasi" name="renkas_details[341918]"
+                            id="renkas_details_341918">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527" selected="selected">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">3,000,000</td>
+                    <td>
+                        <select class="form-control input-sm visa" name="renkas_details[341919]"
+                            id="renkas_details_341919">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530" selected="selected">Visa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ahmad Maulana Chairulloh, A.Md.</th>
+                    <td style="border-left: 1px solid #000 !important;">1,000,000</td>
+                    <td>
+                        <select class="form-control input-sm airport_tax" name="renkas_details[341920]"
+                            id="renkas_details_341920">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530" selected="selected">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">2,500,000</td>
+                    <td>
+                        <select class="form-control input-sm taksi" name="renkas_details[341921]"
+                            id="renkas_details_341921">
+                            <option value="">PILIH</option>
+                            <option value="125525" selected="selected">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">22,500,000</td>
+                    <td>
+                        <select class="form-control input-sm tiket_rupiah" name="renkas_details[341922]"
+                            id="renkas_details_341922">
+                            <option value="">PILIH</option>
+                            <option value="125525" selected="selected">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">18,000,000</td>
+                    <td>
+                        <select class="form-control input-sm uang_harian_rupiah" name="renkas_details[341923]"
+                            id="renkas_details_341923">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527" selected="selected">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">1,000,000</td>
+                    <td>
+                        <select class="form-control input-sm uang_representasi" name="renkas_details[341924]"
+                            id="renkas_details_341924">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527" selected="selected">Uang Harian Es II</option>
+                            <option value="125530">Visa</option>
+                        </select>
+                    </td>
+                    <td style="border-left: 1px solid #000 !important;">3,000,000</td>
+                    <td>
+                        <select class="form-control input-sm visa" name="renkas_details[341925]"
+                            id="renkas_details_341925">
+                            <option value="">PILIH</option>
+                            <option value="125525">Tiket Gol B</option>
+                            <option value="125527">Uang Harian Es II</option>
+                            <option value="125530" selected="selected">Visa</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <button class="btn btn-primary noborder-radius">Simpan</button>
+        </div>
+    </form>
+    <!-- jquery 3 cdn js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $('.select-all').change(function (e) {
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            $('table tbody').find('select.' + id + '').val(value);
+        });
+    </script>
+</body>
+
+</html>

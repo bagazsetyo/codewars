@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACE in Action</title>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 20vh;
+    }
+    button {
+        margin-top: 200px;
+    }
+</style>
+</head>
+<body>
+
+<div id="editor">
+    function home(penjumlahan){
+        penjumlahan = parseInt(penjumlahan);
+        penjumlahan += 10;
+        console.log(penjumlahan);
+        return penjumlahan;
+    }
+
+    var input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('id', 'nomor');
+    $('#tampilan').append(input);
+
+    $('button').click(function(){
+        var nomor = document.getElementById('nomor');
+        var hasil = home(nomor.value);
+        $('#hasil').append(hasil);
+    });
+</div>
+
+<button>tes</button>
+
+<div id="tampilan">
+
+</div>
+
+<div id="hasil">
+
+</div>
+    
+<!-- jquery 3 cdn -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.0/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+
+    // listening id editor on change
+    // editor.getSession().on('change', function(e) {
+        // console.log(editor.getValue());
+        // eval(editor.getValue());
+    // });
+
+    // tes on click
+    
+    // document create element Input
+    // var input = document.createElement('input');
+    // input.setAttribute('type', 'text');
+    // input.setAttribute('id', 'nomor');
+    // $('#tampilan').append(input);
+
+    eval(editor.getValue());
+
+    // $('button').click(function(){
+
+
+    //     var nomor = document.getElementById('nomor');
+    //     // document.getElementById('hasil') ;
+    //     var hasil = home(nomor.value);
+    //     $('#hasil').append(hasil);
+    // });
+
+    // jquery convert string to script 
+    // var script = $('#editor').text();
+    // editor.setValue(script);
+
+    // var x = "console.log('Alive!')";
+    // eval(x)
+
+</script>
+</body>
+</html>

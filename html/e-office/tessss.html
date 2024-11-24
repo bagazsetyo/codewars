@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Buat Invoice
+        &mdash; Sistem Informasi Keuangan</title>
+    <!-- <meta name="csrf-token" content="zY551qjFrqZMayDZwXAABsDkmiDPmhhXFJaaXLOj" /> -->
+    <!-- <meta name='robots' content='noindex, follow' /> -->
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="http://127.0.0.1:8000/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:8000/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1:8000/img/favicon-16x16.png"> -->
+    <!-- <link rel="manifest" href="http://127.0.0.1:8000/img/site.webmanifest"> -->
+    <!-- <link rel="mask-icon" href="http://127.0.0.1:8000/img/safari-pinned-tab.svg" color="#5bbad5"> -->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+
+    <!-- CSS Libraries -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 50px;
+            z-index: 99;
+        }
+    </style>
+
+    <!-- Template CSS -->
+    <!-- <link rel="stylesheet" href="http://127.0.0.1:8000/backend/assets/css/style.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/backend/assets/css/components.css"> -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+
+                    <div class="section-body">
+                        <h2 class="section-title">Buat Invoice</h2>
+                        <p class="section-lead">
+                            Yang memiliki tanda <span class="text-danger">*</span> wajib diisi!
+                        </p>
+
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Buat Invoice</h4>
+                                    </div>
+                                    <form method="POST" action="http://127.0.0.1:8000/dashboard/invoices"
+                                        class="-validation" id="create-invoice" novalidate=""
+                                        enctype="multipart/form-data">
+                                        <input type="hidden" name="_token"
+                                            value="zY551qjFrqZMayDZwXAABsDkmiDPmhhXFJaaXLOj">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="date">Tanggal Invoice <span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control datepicker " name="date"
+                                                            id="date"
+                                                            placeholder="Masukkan Tanggal Invoice (format: yyyy-mm-dd)"
+                                                            value="" required autocomplete="date">
+                                                        <div class="invalid-feedback">
+                                                            Mohon isikan tanggal
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="name">Nama </label>
+                                                        <input id="name" type="text" class="form-control " name="name"
+                                                            placeholder="Masukkan nama penerima invoice" value=""
+                                                            autocomplete="name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="agency">Perusahaan </label>
+                                                        <input id="agency" type="text" class="form-control "
+                                                            name="agency"
+                                                            placeholder="Masukkan nama instansi atau perusahaan penerima invoice"
+                                                            value="" autocomplete="agency">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="phone">Nomor Telepon</label>
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <select name="country_code" id="country-code-phone"
+                                                                    class="form-control"></select>
+                                                            </div>
+                                                            <input name="phone" type="text" class="form-control "
+                                                                id="phone"
+                                                                placeholder="Masukan nomor HP (Contoh: 81123.....)"
+                                                                value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="attachment">Lampiran </label>
+                                                        <input id="attachment" type="text" class="form-control "
+                                                            name="attachment"
+                                                            placeholder="Masukkan nama lampiran (Contoh: Faktur Pajak)"
+                                                            value="" autocomplete="attachment">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="ppn">PPN </label>
+                                                        <input id="ppn" type="number" class="form-control " name="ppn"
+                                                            placeholder="Masukkan jumlah ppn tanpa tanda % (Contoh: 11)"
+                                                            value="" autocomplete="ppn">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pph">PPH </label>
+                                                        <input id="pph" type="number" class="form-control " name="pph"
+                                                            placeholder="Masukkan jumlah pph tanpa tanda % (Contoh: 2)"
+                                                            value="" autocomplete="pph">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <h4>Item Invoice</h4>
+                                            <hr>
+                                            <p>Item #0</p>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="description-0">Deskripsi #0 <span
+                                                                class="text-danger">*</span> </label>
+                                                        <input type="text" class="form-control " name="descriptions[]"
+                                                            id="description-0"
+                                                            placeholder="Masukkan deskripsi singkat..." value=""
+                                                            required="" autocomplete="description" />
+                                                        <div class="invalid-feedback">
+                                                            Mohon isi Deskripsi Item dengan 0
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="price-0">Patokan Harga <span
+                                                                class="text-danger">*</span> </label>
+                                                        <input type="number" class="form-control " name="prices[]"
+                                                            id="price-0" placeholder="Masukkan harga unit item...."
+                                                            value="" required="" autocomplete="price" />
+                                                        <div class="invalid-feedback">
+                                                            Mohon isi Patokan Harga dengan 0
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="qty-0">Jumlah <span class="text-danger">*</span>
+                                                        </label>
+                                                        <input type="number" class="form-control " name="qtys[]"
+                                                            id="qty-0" placeholder="Masukkan jumlah unit item...."
+                                                            value="" required="" autocomplete="qty" />
+                                                        <div class="invalid-feedback">
+                                                            Mohon isi jumlah dengan 0
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Item #1</p>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="description-1">Deskripsi #1 </label>
+                                                        <input type="text" class="form-control " name="descriptions[]"
+                                                            id="description-1"
+                                                            placeholder="Masukkan deskripsi singkat..." value=""
+                                                            autocomplete="description" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="price-1">Patokan Harga </label>
+                                                        <input type="number" class="form-control " name="prices[]"
+                                                            id="price-1" placeholder="Masukkan harga unit item...."
+                                                            value="" autocomplete="price" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="qty-1">Jumlah </label>
+                                                        <input type="number" class="form-control " name="qtys[]"
+                                                            id="qty-1" placeholder="Masukkan jumlah unit item...."
+                                                            value="" autocomplete="qty" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Item #2</p>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="description-2">Deskripsi #2 </label>
+                                                        <input type="text" class="form-control " name="descriptions[]"
+                                                            id="description-2"
+                                                            placeholder="Masukkan deskripsi singkat..." value=""
+                                                            autocomplete="description" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="price-2">Patokan Harga </label>
+                                                        <input type="number" class="form-control " name="prices[]"
+                                                            id="price-2" placeholder="Masukkan harga unit item...."
+                                                            value="" autocomplete="price" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="qty-2">Jumlah </label>
+                                                        <input type="number" class="form-control " name="qtys[]"
+                                                            id="qty-2" placeholder="Masukkan jumlah unit item...."
+                                                            value="" autocomplete="qty" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Item #3</p>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="description-3">Deskripsi #3 </label>
+                                                        <input type="text" class="form-control " name="descriptions[]"
+                                                            id="description-3"
+                                                            placeholder="Masukkan deskripsi singkat..." value=""
+                                                            autocomplete="description" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="price-3">Patokan Harga </label>
+                                                        <input type="number" class="form-control " name="prices[]"
+                                                            id="price-3" placeholder="Masukkan harga unit item...."
+                                                            value="" autocomplete="price" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="qty-3">Jumlah </label>
+                                                        <input type="number" class="form-control " name="qtys[]"
+                                                            id="qty-3" placeholder="Masukkan jumlah unit item...."
+                                                            value="" autocomplete="qty" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Item #4</p>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="description-4">Deskripsi #4 </label>
+                                                        <input type="text" class="form-control " name="descriptions[]"
+                                                            id="description-4"
+                                                            placeholder="Masukkan deskripsi singkat..." value=""
+                                                            autocomplete="description" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="price-4">Patokan Harga </label>
+                                                        <input type="number" class="form-control " name="prices[]"
+                                                            id="price-4" placeholder="Masukkan harga unit item...."
+                                                            value="" autocomplete="price" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <label for="qty-4">Jumlah </label>
+                                                        <input type="number" class="form-control " name="qtys[]"
+                                                            id="qty-4" placeholder="Masukkan jumlah unit item...."
+                                                            value="" autocomplete="qty" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <label for=""></label>
+                                                    <input type="button" class="btn btn-primary" id="btn-invoice"
+                                                        value="Buat"></input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembuatan Invoice!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Apakah anda yakin akan membuat invoice ini? silakan periksa kembali apabila sudah benar
+                                klik tombol <strong>Buat Invoice</strong>.
+                            </p>
+                            <strong>Berikut Data Invoice:</strong>
+                            <table>
+                                <tr>
+                                    <th>Tanggal Invoice</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-date"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>Kepada</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-name"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>Perusahaan</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-agency"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>Nomor Telepon</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-phone"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>Lampiran</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-attachment"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>PPN</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-ppn"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>PPH</th>
+                                    <td>:</td>
+                                    <td> <span id="preview-pph"></span></td>
+                                </tr>
+                            </table>
+                            <br>
+                            <strong>Berikut Data Item Invoice:</strong>
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-modal-items">
+                                    <tr>
+                                        <thead>
+                                            <tr>
+                                                <th>Deskripsi</th>
+                                                <th>Harga</th>
+                                                <th>Jumlah</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="invoice-items">
+                                        </tbody>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Periksa
+                                Kembali</button>
+                            <button type="submit" class="btn btn-primary" id="btn-invoice-submit">Buat Invoice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Main Content -->
+
+
+            <button onclick="topFunction()" id="myBtn" class="btn btn-danger" title="Go to top"><i
+                    class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    Copyright &copy; Sadasa Academy 2022 <div class="bullet"></div> Design By <a
+                        href="https://nauval.in/">Muhamad Nauval Azhar</a>
+                </div>
+                <div class="footer-right">
+                    Development
+                </div>
+            </footer> <!-- / Footer -->
+        </div>
+    </div>
+
+
+
+    <!-- General JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="http://127.0.0.1:8000/backend/assets/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <!-- <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+
+    <!-- Template JS File -->
+    <!-- <script src="http://127.0.0.1:8000/backend/assets/js/scripts.js"></script>
+    <script src="http://127.0.0.1:8000/backend/assets/js/custom.js"></script> -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function () {
+            // Untuk input tanggal
+            // $("#date").datepicker({
+            //     dateFormat: "yy-mm-dd",
+            // });
+
+            $('#btn-invoice').click(function () {
+                $('#exampleModal').modal('show')
+                $("#btn-invoice-submit").click(function () {
+                    $("#btn-invoice-submit").attr("disabled", true);
+                    $('#create-invoice').submit();
+                });
+            })
+
+            // // select2
+            // $('#country-code-phone').select2();
+
+            // // Sumber tutorial: https://www.codebyamir.com/blog/populate-a-select-dropdown-list-with-json
+            // // Menampilkan kode negara ke dropdown
+            // let dropdown = document.getElementById('country-code-phone');
+            // dropdown.length = 0;
+
+            // let defaultOption = document.createElement('option');
+            // defaultOption.text = 'Pilih Kode Negara';
+
+            // dropdown.add(defaultOption);
+            // dropdown.selectedIndex = 0;
+
+            // Sumber data: https://cuik-projects.github.io/country-list/countries.json
+            // Memanggil data json kode negara
+            // const url = 'https://cuik-projects.github.io/country-list/countries.json';
+
+            // fetch(url)
+            //     .then(
+            //         function (response) {
+            //             if (response.status !== 200) {
+            //                 console.warn('Looks like there was a problem. Status Code: ' + response.status);
+            //                 return;
+            //             }
+
+            //             // Examine the text in the response
+            //             response.json().then(function (data) {
+            //                 let option;
+
+            //                 for (let i = 0; i < data.length; i++) {
+            //                     option = document.createElement('option');
+            //                     option.text = data[i].name + ' ' + data[i].dial_code;
+            //                     option.value = data[i].dial_code.slice(1);
+            //                     dropdown.add(option);
+            //                     // console.log(data[i].dial_code.slice(1));
+            //                 }
+            //             });
+            //         }
+            //     )
+            //     .catch(function (err) {
+            //         console.error('Fetch Error -', err);
+            //     });
+
+
+            // Menampilkan data sebelum submit di popup modal
+            $('#btn-invoice').click(function () {
+                $('#preview-date').text($('#date').val());
+                $('#preview-name').text($('#name').val());
+                $('#preview-agency').text($('#agency').val());
+                $('#preview-phone').text($('#country-code-phone').val() + $('#phone').val());
+                $('#preview-attachment').text($('#attachment').val());
+                $('#preview-ppn').text($('#ppn').val());
+                $('#preview-pph').text($('#pph').val());
+
+                var descriptions = [];
+                var prices = [];
+                var qtys = [];
+                $('input[name^=descriptions]').each(function () {
+                    descriptions.push($(this).val());
+                });
+                $('input[name^=prices]').each(function () {
+                    prices.push($(this).val());
+                });
+                $('input[name^=qtys]').each(function () {
+                    qtys.push($(this).val());
+                });
+                var html = ''
+                $(prices).each(function (index, tr) {
+                    html += '<tr>';
+                    html += '<td>' + descriptions[index] + '</td>';
+                    html += '<td>' + prices[index] + '</td>';
+                    html += '<td>' + qtys[index] + '</td>';
+                    html += '</tr>';
+                });
+                $('#table-modal-items').find('#invoice-items').html(html);
+            });
+        });
+    </script>
+</body>
+
+</html
