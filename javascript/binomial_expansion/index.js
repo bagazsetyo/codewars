@@ -70,17 +70,18 @@ function factorial(n) {
 }
 
 
-// console.log(expand('(-5m+3)^4'));
+console.log(expand('(-5m+3)^4'));
 // console.log(expand('(-2k-3)^3'));
 // console.log(expand('(-7x-7)^0'));
-// console.log(expand('(-12a+1)^7'));
+// console.log(expand('(-12a+1xxxx)^7'));
 // console.log(expand('(-45k-6)^5'));
 // console.log(expand('(-12c+1)^1'));
 
 // console.log(expand("(-12c+1)^1"), "1-12c");
 
-console.log(expand('(-k+10)^3'));
-console.log(expand('(-b-12)^4'));
+// console.log(expand('(-k+10)^3'));
+// console.log(expand('(-b-12)^4'));
+
 
 
 

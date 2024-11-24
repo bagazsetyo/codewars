@@ -1,0 +1,1 @@
+const vaporcode = $ => $.toUpperCase().match(/[^\s]/gi).join('  ')
